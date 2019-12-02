@@ -12,7 +12,7 @@ namespace Лабораторная_работа1
         {
             Console.Title = "Желова Александра ИУ5-33Б";
             Double A=0, B=0, C=0;
-            if (args.Length != 0)
+            if (args.Length ==3)
             {
                 if (!double.TryParse(args[0], out A) || !double.TryParse(args[1], out B) || !double.TryParse(args[2], out C))
                 {
@@ -79,6 +79,13 @@ namespace Лабораторная_работа1
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Действительных корней нет");
+                Console.ResetColor();
+                Console.ReadKey();
+            }
+            if (C == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("x= 0");
                 Console.ResetColor();
                 Console.ReadKey();
             }
